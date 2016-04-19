@@ -23,10 +23,6 @@
 			<h1 id="welcome">Welcome to The Library</h1>
                         <p id="about">One of the best libraries in the country!</p>
 
-			
-			
-	
-			
 		</div>
 
 	</body>

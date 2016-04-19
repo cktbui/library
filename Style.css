@@ -1,0 +1,277 @@
+body{
+	/*A subtle background pattern*/
+	background: url(crossword.png) ; 
+	background-color: #ffffff;
+	margin: 0;
+}
+
+#container{
+/*The invisible container to keep the content
+	in the middle*/
+	margin: 0 auto;
+	width: 90%;
+	height: auto;
+	background: url(crossword.png) ; 
+	text-align: center;
+}
+
+#container a{
+	color: black;
+	font-family: "Raleway", sans-serif;
+}
+
+#container p{
+	font-family: "Raleway", sans-serif;
+}
+nav{
+/* Navigation bar */
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-bottom: 1.5em;
+	background-color: #353535;
+	padding: 15px 0;
+	vertical-align: top;
+}
+
+nav a{
+	width: 180px;
+	display: inline-block;
+	text-decoration: none;
+	font-family: "Raleway", sans-serif;
+}
+nav img{
+	display: inline-block;
+}
+/*Navigation bar styling*/
+.bucket-link{
+	color: #96E0D3;
+	transition: color 0.5s;
+}
+.done-link{
+	color: #96E0D3;
+	transition: color 0.5s;
+}
+
+/* A different color when hovering on the 
+navigation bar. */
+.bucket-link:hover {
+	color:#F5A2A2;
+}
+.done-link:hover {
+	color:#F5A2A2;
+}
+.active-page {
+	color:#F5A2A2;
+}
+
+.welcome-link-img {
+/* Ribbon banner-link to get back 
+to the welcome page. */
+	position: absolute;
+	left:0;
+	top:-1%;
+	right:0;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+h1{
+	color:#96E0D3;
+	font-family: "Raleway", sans-serif;
+	margin-left: 12%;
+}
+
+#welcome{
+	color:#96E0D3;
+	font-family: "Raleway", sans-serif;
+	margin-top: 2.5em;
+	margin-left:auto;
+	margin-right:auto;
+	font-size: 50px;
+}
+
+#about{
+	color: black;
+	font-family: "Raleway", sans-serif;
+	margin-left:auto;
+	margin-right:auto;
+	font-size: 20px;
+}
+#about a{
+	color:#F5A2A2;
+	font-weight: bold;
+}
+#overskrift{
+	color:#96E0D3;
+	font-family: "Raleway", sans-serif;
+	margin-top: 2.5em;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.box {
+	height: 14em;
+	width: 14em;
+	display: inline-block;
+	margin: 0.5em 0.5em;
+	vertical-align: middle;
+}
+.pic1{
+	background-image: url(stockvault-paraglider-in-sky138851.jpg);
+	background-size: 14.1em;
+	overflow: hidden;
+}
+.pic2{
+	background-image: url(2392661648_022143325e_b.jpg);
+	background-size: 14.1em;
+	overflow: hidden;
+}
+.pic3{
+	background-image: url(6597222433_f38292920a_o.jpg);
+	background-size: 14.1em;
+	overflow: hidden;
+}
+.pic4{
+	background-image: url(14453967289_0cce1cff4f_o.jpg);
+	background-size: 14.4em;
+	overflow: hidden;
+}
+.pic5{
+	background-image: url(5715569460_043a8b5859_o.jpg);
+	background-size: 14.1em;
+	overflow: hidden;
+}
+.pic6{
+	background-image: url(6318926931_336ae0fd12_o.jpg);
+	background-size: 14em;
+	overflow: hidden;
+}
+.pic7{
+	background-image: url(15062644869_dfb128532d_o.jpg);
+	background-size: 14em;
+	overflow: hidden;
+}
+.pic8{
+	background-image: url(14286394868_3f4b53ab98_k.jpg);
+	background-size: 14.1em;
+	overflow: hidden;
+}
+.pic9{
+	background-image: url(14100022201_f9fa1d0484_o.jpg);
+	background-size: 14em;
+	overflow: hidden;
+}
+.pic10{
+	background-image: url(4674498513_e95effc444_b.jpg);
+	background-size: 14em;
+	overflow: hidden;
+}
+.pic11{
+	background-image: url(8233073411_dea4683697_o.jpg);
+	background-size: 14.1em;
+	overflow: hidden;
+}
+.pic12{
+	background-image: url(2944948437_d0beb9972d_b.jpg);
+	background-size: 14.1em;
+	overflow: hidden;
+}
+
+/* Makes the picture fade out and text 
+appear when hovering*/
+.box p{
+	opacity: 0;
+	height: 100%;
+	width:99%;
+	display: inline-block;
+	margin-top:0;
+	padding:1%;
+	padding-top:35%;
+	background:#fff;
+	text-align: center;
+	font-family: "Raleway", sans-serif;
+	font-size: 25px;
+}
+
+.box p:hover {
+	opacity: 0.7;
+	transition: all .3s linear;
+	-webkit-transition:all .3s linear;
+	-moz-transition:all .3s linear;
+	-o-transition:all .3s linear;
+	-ms-transition:all .3s linear;
+}
+
+.done-pic1{
+	background-image: url(surfing.jpg);
+	background-size: 14em;
+	overflow: hidden;
+}
+.done-pic2{
+	background-image: url(brunomars.jpg);
+	background-size: 14em;
+	overflow: hidden;
+}
+.done-pic3{
+	background-image: url(Bald.jpg);
+	background-size: 14em;
+	overflow: hidden;
+}
+.done-pic4{
+	background-image: url(vegas.jpg);
+	background-size: 14em;
+	overflow: hidden;
+}
+.done-pic5{
+	background-image: url(ozone.jpg);
+	background-size: 14em;
+	overflow: hidden;
+}
+.done-pic6{
+	background-image: url(10177892_10203638841829393_7756050131427380146_n.jpg);
+	background-size: 14em;
+	overflow: hidden;
+}
+.done-pic7{
+	background-image: url(ladygaga.jpg);
+	background-size: 14em;
+	overflow: hidden;
+}
+.done-pic8{
+	background-image: url(IMG_20140317_092633.jpg);
+	background-size: 14em;
+	overflow: hidden;
+}
+.done-pic9{
+	background-image: url(hawaii.jpg);
+	background-size: 14em;
+	overflow: hidden;
+}
+.done-pic10{
+	background-image: url(8476803739_99496d0e4f_z.jpg);
+	background-size: 14em;
+	overflow: hidden;
+}
+.done-pic11{
+	background-image: url(6066328733_045e7f3ca7_o.jpg);
+	background-size: 14em;
+	overflow: hidden;
+}
+.done-pic12{
+	background-image: url(7685688156_648073ac4c_o.jpg);
+	background-size: 14em;
+	overflow: hidden;
+}
+
+#temp-img{
+	width: 55%;
+	height: auto;
+}
+footer {
+	height: 3em;
+	width: auto;
+	color: #AAAAAA;
+	font-family: "Raleway", sans-serif;
+}

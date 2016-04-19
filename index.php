@@ -23,7 +23,7 @@
 			<h1 id="welcome">Welcome to The Library</h1>
                         <p id="about">One of the best libraries in the country!</p>
 
-			<a href="http://www.urbandictionary.com/define.php?term=library" target="blank">what is a library? Click on me and find out!</a>
+			
 			
 	
 			

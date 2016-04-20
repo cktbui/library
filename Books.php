@@ -26,8 +26,8 @@
 
 			
 			
-<table class="tablestyle table">
- <thead class="thead-inverse">
+<table class="tablestyle table table-hover">
+ <thead>
  		<tr>
  			<th>S.N.</th>
  			<th>Book title</th>
@@ -44,8 +44,8 @@
  		$resultat = $db->query($sql);
  		while($row = $resultat->fetch_assoc())
  		{
- 			echo "<tr scope='row'><td><a> {$row['bookid']} </a></td><td><a> {$row['title']} </a></td><td><a> {$row['name']} </a></td><td><a> {$row['pub_year']} </a></td><td><a> {$row['available']} </a></td><td><button>Edit</button></td>
- 			<td><button>Delete</button></td></tr>";
+ 			echo "<tr scope='row'><td><a> {$row['bookid']} </a></td><td><a> {$row['title']} </a></td><td><a> {$row['name']} </a></td><td><a> {$row['pub_year']} </a></td><td><a> {$row['available']} </a></td><td><button type='button' class='btn btn-success-outline'>Edit</button></td>
+ 			<td><button type='button' class='btn btn-danger-outline'>Delete</button></td></tr>";
  		
 		}
  		$resultat->close();

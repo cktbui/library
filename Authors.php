@@ -22,7 +22,30 @@
 		<div id="container"> <!--An invisible container to keep my content in the middle of the page-->
 			<h1 id="welcome">Authors</h1>
                         <p id="about">Here you can see all the authors!</p>
-
+                        <table class="tablestyle">
+                        <thead>
+                           <tr>
+                                <th>Authorid</th>
+                               <th>Author name</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                            <?php
+                                $db = new mysqli("localhost","root","","library");
+                                $sql ="select * from authors";
+                                $resultat = $db->query($sql);
+                                while($row = $resultat->fetch_assoc())
+                                {
+                                    echo "<tr><td><a> {$row['authorid']}</a></td><td><a> {$row['name']} </a></td><td><button>Edit</button></td>
+                                    <td><button>Delete</button></td></tr>";
+ 		
+                                }
+                                $resultat->close();
+                                $db-> close();
+                            ?>
+                     </table>
+                      
 			<a href="http://www.urbandictionary.com/define.php?term=library" target="blank">what is a library? Click on me and find out!</a>
 			
 	

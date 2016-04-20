@@ -27,6 +27,9 @@ body{
     border-bottom-color: gray;
     border-bottom-style: groove;
 }
+.tablestyle tr:hover{
+    background-color: #96E0D3;
+}
 
 .tablestyle td{
     padding-top: 1%;

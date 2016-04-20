@@ -38,7 +38,7 @@
                             </tr>
                         </thead>
                             <?php
-                                $db = new mysqli("localhost","root","","library");
+                                $db = new mysqli("localhost","librarian","","library");
                                 $sql ="select b.bookid, b.title,a.name, b.pub_year, b.available from books as b, authors as a where b.authorid=a.authorid";
                                 $resultat = $db->query($sql);
                                 while($row = $resultat->fetch_assoc())

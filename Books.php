@@ -26,7 +26,20 @@
 			
                         <form action="#" method="post">
                             <input type="text" name="title" placeholder="Book title">
-                            <input type="text" name="author_name" placeholder="Author name">
+                            <select name="author_name" placeholder="Author name">
+                                <?php
+                                    $db = new mysqli("localhost","librarian","","library");
+                                    $sql ="select name from authors";
+                                    $resultat = $db->query($sql);
+                                    while($row = $resultat->fetch_assoc())
+                                    {
+                                        echo "<option>{$row['name']}</option>";
+                                    }
+                                    $resultat->close();
+                                    $db->close();
+                                    
+                                ?>
+                                </select>
                             <input type="text" name="pub_year" placeholder="Published year">
                             <input type="text" name="available" placeholder="Available">
                             <input type="button" name="add" value="Add"> 

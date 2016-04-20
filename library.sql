@@ -1,20 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
+-- version 4.4.10
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: 20. Apr, 2016 11:46 a.m.
--- Server-versjon: 10.1.9-MariaDB
--- PHP Version: 5.6.15
+-- Host: localhost:8889
+-- Generation Time: Apr 20, 2016 at 03:10 PM
+-- Server version: 5.5.42
+-- PHP Version: 5.6.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `library`
@@ -23,28 +17,31 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur for tabell `authors`
+-- Table structure for table `authors`
 --
 
 CREATE TABLE `authors` (
   `authorid` int(11) NOT NULL,
   `name` varchar(55) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 --
--- Dataark for tabell `authors`
+-- Dumping data for table `authors`
 --
 
 INSERT INTO `authors` (`authorid`, `name`) VALUES
 (1, 'J.R.R. Tolken'),
+(2, 'C. S. Lewis'),
 (3, 'Alex Haley'),
 (4, 'Tom Clancy'),
-(5, 'Isaac Asimov');
+(5, 'Isaac Asimov'),
+(6, 'Anna Gavalda'),
+(7, 'Gene Kim, Kevin Behr, George Spafford');
 
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur for tabell `books`
+-- Table structure for table `books`
 --
 
 CREATE TABLE `books` (
@@ -54,15 +51,22 @@ CREATE TABLE `books` (
   `ISBN` varchar(25) NOT NULL,
   `pub_year` smallint(6) NOT NULL,
   `Available` varchar(4) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 --
--- Dataark for tabell `books`
+-- Dumping data for table `books`
 --
 
 INSERT INTO `books` (`bookid`, `authorid`, `title`, `ISBN`, `pub_year`, `Available`) VALUES
 (1, 1, 'The Two Towers', '0-261-10236-2', 1954, 'Yes'),
-(2, 1, 'The Return of The King ', '0-261-10237-0', 1955, 'No');
+(2, 1, 'The Return of The King ', '0-261-10237-0', 1955, 'No'),
+(3, 6, 'Hunting and Gathering', '9782842630850', 2006, '8'),
+(5, 2, 'The Lion, the Witch and the Wardrobe', '7207376', 1950, '5'),
+(6, 2, 'Prince Caspian', '978-0-00-671679-2', 1951, '5'),
+(7, 2, 'The Voyage of the Dawn Treader', '978-0-00-671680-8', 1952, '5'),
+(8, 2, 'The Silver Chair', '978-0-00-671681-5', 1953, '5'),
+(9, 2, 'The Horse and His Boy', '978-0-00-671678-5', 1954, '4'),
+(10, 7, 'The Phoenix Project', '9780988262591', 2013, '5');
 
 --
 -- Indexes for dumped tables
@@ -88,12 +92,9 @@ ALTER TABLE `books`
 -- AUTO_INCREMENT for table `authors`
 --
 ALTER TABLE `authors`
-  MODIFY `authorid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `authorid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `books`
 --
 ALTER TABLE `books`
-  MODIFY `bookid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+  MODIFY `bookid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;

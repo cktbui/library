@@ -19,9 +19,9 @@
 
 
 	
-		<div id="container"> <!--An invisible container to keep my content in the middle of the page-->
+		<div id="container"> <!--An invisible container to keep the content in the middle of the page-->
 			<h1 id="welcome">Authors</h1>
-                        <p id="about">Here you can see all the authors!</p>
+                        <p id="about">The authors of the Book Library</p>
                         <table class="tablestyle">
                         <thead>
                            <tr>
@@ -32,7 +32,7 @@
                             </tr>
                         </thead>
                             <?php
-                                $db = new mysqli("localhost","root","","library");
+                                $db = new mysqli("localhost","librarian","","library");
                                 $sql ="select * from authors";
                                 $resultat = $db->query($sql);
                                 while($row = $resultat->fetch_assoc())
@@ -46,7 +46,6 @@
                             ?>
                      </table>
                       
-			<a href="http://www.urbandictionary.com/define.php?term=library" target="blank">what is a library? Click on me and find out!</a>
 			
 	
 			

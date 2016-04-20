@@ -2,6 +2,7 @@
 
 <html lang="eng">
 	<head>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 		<title>The Library</title>
 		<link rel="stylesheet" type="text/css" href="Style.css">
@@ -25,8 +26,8 @@
 
 			
 			
-<table class="tablestyle">
- <thead>
+<table class="tablestyle table">
+ <thead class="thead-inverse">
  		<tr>
  			<th>S.N.</th>
  			<th>Book title</th>
@@ -43,7 +44,7 @@
  		$resultat = $db->query($sql);
  		while($row = $resultat->fetch_assoc())
  		{
- 			echo "<tr><td><a> {$row['bookid']} </a></td><td><a> {$row['title']} </a></td><td><a> {$row['name']} </a></td><td><a> {$row['pub_year']} </a></td><td><a> {$row['available']} </a></td><td><button>Edit</button></td>
+ 			echo "<tr scope='row'><td><a> {$row['bookid']} </a></td><td><a> {$row['title']} </a></td><td><a> {$row['name']} </a></td><td><a> {$row['pub_year']} </a></td><td><a> {$row['available']} </a></td><td><button>Edit</button></td>
  			<td><button>Delete</button></td></tr>";
  		
 		}

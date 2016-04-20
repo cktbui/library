@@ -91,7 +91,7 @@
                                              $available = $_POST['available'];
                                              $sql = "insert into books values('', $authorid, '$title','$ISBN','$pubyear','$available')";
                                              $resultat = $db->query($sql);
-                                             $resultat->close();
+                                             //$resultat->close();
                                              $db->close();
                                              
                                         }

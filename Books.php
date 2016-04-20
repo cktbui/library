@@ -25,7 +25,7 @@
 
 			
 			
-<table class="tablestyle">
+<table class="tablestyle CSSTableGenerator">
  <thead>
  		<tr>
  			<th>S.N.</th>

@@ -40,9 +40,10 @@
                                     
                                 ?>
                                 </select>
+                            <input type="text" name="ISBN" placeholder="ISBN">
                             <input type="text" name="pub_year" placeholder="Published year">
                             <input type="text" name="available" placeholder="Available">
-                            <input type="button" name="add" value="Add"> 
+                            <input type="submit" name="add" value="Add"> 
                             
                             <table class="tablestyle">
                                 <thead>
@@ -67,12 +68,32 @@
 
                                         }
                                         $resultat->close();
-                                        $db-> close();
+                                        $db->close();
                                         if(isset($_POST["add"]))
                                         {
-                                             //$db = new mysqli("localhost","root","","library");
-                                             //$sql = "delete from books where bookid=$_POST[itemID]";
-                                             echo "hei";
+                                             $name = $_POST['author_name'];
+                                             $db = new mysqli("localhost","librarian","","library");
+                                             $getNameId = "select authorid from authors where name='$name'";
+                                             $resultat1 = $db->query($getNameId);
+                                             if($db->affected_rows==1)
+                                             {
+                                                 $row = $resultat1->fetch_assoc();
+                                                 echo "{$row['authorid']}";
+                                             }
+                                             else{
+                                                 die($db->error);
+                                             }
+                                             $resultat1->close();
+                                             $title = $_POST['title'];
+                                             $authorid = "{$row['authorid']}";
+                                             $ISBN = $_POST['ISBN'];
+                                             $pubyear = $_POST['pub_year'];
+                                             $available = $_POST['available'];
+                                             $sql = "insert into books values('', $authorid, '$title','$ISBN','$pubyear','$available')";
+                                             $resultat = $db->query($sql);
+                                             $resultat->close();
+                                             $db->close();
+                                             
                                         }
 
                                         ?>

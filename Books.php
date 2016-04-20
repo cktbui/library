@@ -24,7 +24,7 @@
                         <p id="about">All the books in the library!</p>
 
 			
-			
+                        <form action="#" method="post">
                     <table class="tablestyle">
                         <thead>
                            <tr>
@@ -44,13 +44,22 @@
                                 while($row = $resultat->fetch_assoc())
                                 {
                                     echo "<tr><td><a> {$row['bookid']} </a></td><td><a> {$row['title']} </a></td><td><a> {$row['name']} </a></td><td><a> {$row['pub_year']} </a></td><td><a> {$row['available']} </a></td><td><button>Edit</button></td>
-                                    <td><button>Delete</button></td></tr>";
+                                    <td><input name='slett' type='submit' value='Delete' alt='{$row['bookid']}'></td></tr>";
  		
                                 }
                                 $resultat->close();
                                 $db-> close();
-                            ?>
+                                if(isset($_POST["slett"]))
+                                {
+                                     //$db = new mysqli("localhost","root","","library");
+                                     //$sql = "delete from books where bookid=$_POST[itemID]";
+                                     echo $_POST['value'];
+                                }
+                                
+                                ?>
                      </table>
+                          
+                    </form>
                         <button type="button">add</button>
                     <a href="http://www.urbandictionary.com/define.php?term=library" target="blank">what is a library? Click on me and find out!</a>			
 		</div>

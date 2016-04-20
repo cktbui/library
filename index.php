@@ -5,7 +5,6 @@
 		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 		<title>The Library</title>
 		<link rel="stylesheet" type="text/css" href="Style.css">
-		<script type="text/javascript" src="javascript.js"></script>
 	</head>
 
 	<body>
@@ -20,7 +19,7 @@
 
 	
 		<div id="container"> <!--An invisible container to keep my content in the middle of the page-->
-			<h1 id="welcome">Welcome to The Library</h1>
+			<h1 id="welcome">Welcome to The Book Library</h1>
                         <p id="about">One of the best libraries in the country!</p>
 
 		</div>

@@ -14,7 +14,11 @@ body{
 	background: url(crossword.png) ; 
 	text-align: center;
 }
-
+.tablestyle{
+	margin-right: auto;
+	margin-left: auto;
+	padding-bottom: 2em;
+}
 #container a{
 	color: black;
 	font-family: "Raleway", sans-serif;

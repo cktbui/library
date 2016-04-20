@@ -25,43 +25,61 @@
 
 			
                         <form action="#" method="post">
-                    <table class="tablestyle">
-                        <thead>
-                           <tr>
-                                <th>S.N.</th>
-                                <th>Book title</th>
-                                <th>Author name</th>
-                                <th>Published year</th>
-                                <th>Available</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
-                            </tr>
-                        </thead>
-                            <?php
-                                $db = new mysqli("localhost","librarian","","library");
-                                $sql ="select b.bookid, b.title,a.name, b.pub_year, b.available from books as b, authors as a where b.authorid=a.authorid";
-                                $resultat = $db->query($sql);
-                                while($row = $resultat->fetch_assoc())
-                                {
-                                    echo "<tr><td><a> {$row['bookid']} </a></td><td><a> {$row['title']} </a></td><td><a> {$row['name']} </a></td><td><a> {$row['pub_year']} </a></td><td><a> {$row['available']} </a></td><td><button>Edit</button></td>
-                                    <td><input name='slett' type='submit' value='Delete' alt='{$row['bookid']}'></td></tr>";
- 		
-                                }
-                                $resultat->close();
-                                $db-> close();
-                                if(isset($_POST["slett"]))
-                                {
-                                     //$db = new mysqli("localhost","root","","library");
-                                     //$sql = "delete from books where bookid=$_POST[itemID]";
-                                     echo $_POST['value'];
-                                }
-                                
+                            <input type="text" name="title" placeholder="Book title">
+                            <select name="author_name" placeholder="Author name">
+                                <?php
+                                    $db = new mysqli("localhost","librarian","","library");
+                                    $sql ="select name from authors";
+                                    $resultat = $db->query($sql);
+                                    while($row = $resultat->fetch_assoc())
+                                    {
+                                        echo "<option>{$row['name']}</option>";
+                                    }
+                                    $resultat->close();
+                                    $db->close();
+                                    
                                 ?>
-                     </table>
+                                </select>
+                            <input type="text" name="pub_year" placeholder="Published year">
+                            <input type="text" name="available" placeholder="Available">
+                            <input type="button" name="add" value="Add"> 
+                            
+                            <table class="tablestyle">
+                                <thead>
+                                   <tr>
+                                        <th>S.N.</th>
+                                        <th>Book title</th>
+                                        <th>Author name</th>
+                                        <th>Published year</th>
+                                        <th>Available</th>
+                                        <th>Edit</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </thead>
+                                    <?php
+                                        $db = new mysqli("localhost","librarian","","library");
+                                        $sql ="select b.bookid, b.title,a.name, b.pub_year, b.available from books as b, authors as a where b.authorid=a.authorid";
+                                        $resultat = $db->query($sql);
+                                        while($row = $resultat->fetch_assoc())
+                                        {
+                                            echo "<tr><td><a> {$row['bookid']} </a></td><td><a> {$row['title']} </a></td><td><a> {$row['name']} </a></td><td><a> {$row['pub_year']} </a></td><td><a> {$row['available']} </a></td><td><button>Edit</button></td>
+                                            <td><input name='slett' type='submit' value='Delete' alt='{$row['bookid']}'></td></tr>";
+
+                                        }
+                                        $resultat->close();
+                                        $db-> close();
+                                        if(isset($_POST["add"]))
+                                        {
+                                             //$db = new mysqli("localhost","root","","library");
+                                             //$sql = "delete from books where bookid=$_POST[itemID]";
+                                             echo "hei";
+                                        }
+
+                                        ?>
+                             </table>
                           
                     </form>
-                        <button type="button">add</button>
-                    <a href="http://www.urbandictionary.com/define.php?term=library" target="blank">what is a library? Click on me and find out!</a>			
+                   <a href="http://www.urbandictionary.com/define.php?term=library" target="blank">what is a library? Click on me and find out!</a>			
 		</div>
 
 	</body>

@@ -25,7 +25,7 @@
                         <table class="tablestyle">
                         <thead>
                            <tr>
-                                <th>Authorid</th>
+                                <th>Author ID</th>
                                <th>Author name</th>
                                 <th>Edit</th>
                                 <th>Delete</th>

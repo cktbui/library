@@ -48,7 +48,7 @@
                             <table class="tablestyle">
                                 <thead>
                                    <tr>
-                                        <th>S.N.</th>
+                                        <th>Book ID</th>
                                         <th>Book title</th>
                                         <th>Author name</th>
                                         <th>Published year</th>

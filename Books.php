@@ -41,23 +41,12 @@
  		$db = new mysqli("localhost","root","","library");
  		$sql ="select b.bookid, b.title,a.name, b.pub_year, b.available from books as b, authors as a where b.authorid=a.authorid";
  		$resultat = $db->query($sql);
- 		if(!$resultat)
- 		{
- 			die("feil");
- 		}
  		while($row = $resultat->fetch_assoc())
  		{
- 			$tekst= "<tr>
- 			<td><a> {$row['bookid']} </a></td>
- 			<td><a> {$row['title']} </a></td>
- 			<td><a> {$row['name']} </a></td>
- 			<td><a> {$row['pub_year']} </a></td>
- 			<td><a> {$row['available']} </a></td>
- 			<td><button>Edit</button></td>
- 			<td><button>Delete</button></td>
- 		</tr>";
- 		echo $tekst;
- 		}
+ 			echo "<tr><td><a> {$row['bookid']} </a></td><td><a> {$row['title']} </a></td><td><a> {$row['name']} </a></td><td><a> {$row['pub_year']} </a></td><td><a> {$row['available']} </a></td><td><button>Edit</button></td>
+ 			<td><button>Delete</button></td></tr>";
+ 		
+		}
  		$resultat->close();
  		$db-> close();
  	?>

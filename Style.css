@@ -18,7 +18,26 @@ body{
 	margin-right: auto;
 	margin-left: auto;
 	padding-bottom: 2em;
+        border-spacing: 0;
+        border-collapse: collapse;
+        width: 100%;
+  
 }
+.tablestyle tr{
+    border-bottom-color: gray;
+    border-bottom-style: groove;
+}
+
+.tablestyle td{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.tablestyle th{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
 #container a{
 	color: black;
 	font-family: "Raleway", sans-serif;

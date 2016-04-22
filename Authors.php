@@ -24,6 +24,8 @@
                         <p id="about">The authors of the Book Library</p>
                       
                         <form action="#" method="post">
+                        <input type="text" name="name" placeholder="Author name">
+                        <input type="submit" name="add" value="Add"> 
                         
                         <table class="tablestyle">
                         <thead>
@@ -33,6 +35,8 @@
                                 
                             </tr>
                         </thead>
+                            
+                        
                             <?php
                                 $db = new mysqli("localhost","librarian","","library");
                                  if(isset($_POST["delete"]))

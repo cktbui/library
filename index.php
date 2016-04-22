@@ -1,4 +1,4 @@
-we<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="eng">
 	<head>

@@ -63,8 +63,8 @@
                                         $resultat = $db->query($sql);
                                         while($row = $resultat->fetch_assoc())
                                         {
-                                            echo "<tr><td><a> {$row['bookid']} </a></td><td><a> {$row['title']} </a></td><td><a> {$row['name']} </a></td><td><a> {$row['pub_year']} </a></td><td><a> {$row['available']} </a></td><td><button>Edit</button></td>
-                                            <td><input name='slett' type='submit' value='Delete' alt='{$row['bookid']}'></td></tr>";
+                                            echo "<tr><td><a> {$row['bookid']} </a></td><td><a> {$row['title']} </a></td><td><a> {$row['name']} </a></td><td><a> {$row['pub_year']} </a></td><td><a> {$row['available']} </a></td><td><button class='button-edit' >Edit</button></td>
+                                            <td><input class='button-delete'name='slett' type='submit' value='Delete' id='delete{$row['bookid']}' onclick='delete()'></td></tr>";
 
                                         }
                                         $resultat->close();
@@ -95,6 +95,8 @@
                                              $db->close();
                                              
                                         }
+                                        
+                                         if(isset($_POST["Delete"] ))
 
                                         ?>
                              </table>

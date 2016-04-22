@@ -5,7 +5,7 @@
                 <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 		<title>The Library</title>
 		<link rel="stylesheet" type="text/css" href="Style.css">
-		<script type="text/javascript" src="javascript.js"></script>
+		<script type="text/javascript" src="javascript.js"></script>            
 	</head>
 
 	<body>
@@ -53,8 +53,6 @@
                                         <th>Author name</th>
                                         <th>Published year</th>
                                         <th>Available</th>
-                                        <th>Edit</th>
-                                        <th>Delete</th>
                                     </tr>
                                 </thead>
                                     <?php
@@ -63,9 +61,8 @@
                                         $resultat = $db->query($sql);
                                         while($row = $resultat->fetch_assoc())
                                         {
-                                            echo "<tr><td><a> {$row['bookid']} </a></td><td><a> {$row['title']} </a></td><td><a> {$row['name']} </a></td><td><a> {$row['pub_year']} </a></td><td><a> {$row['available']} </a></td><td><button class='button-edit' >Edit</button></td>
-                                            <td><input class='button-delete'name='slett' type='submit' value='Delete' id='delete{$row['bookid']}' onclick='delete()'></td></tr>";
-
+                                            echo "<tr><td><input type='radio' name='radio'value='{$row['bookid']}'>{$row['bookid']}</td><td>{$row['title']}</td><td>{$row['name']}</td><td>{$row['pub_year']}</td><td>{$row['available']}</td></tr>";
+                                                
                                         }
                                         $resultat->close();
                                         $db->close();
@@ -96,11 +93,18 @@
                                              
                                         }
                                         
-                                         if(isset($_POST["Delete"] ))
+                                         if(isset($_POST["delete"] ))
+                                         {
+                                             $id = $_POST["radio"];
+                                            $db = new mysqli("localhost","librarian","","library");
+                                            $sql ="Delete from books where bookid=$id";
+                                            $resultat = $db->query($sql);
+                                             
+                                         }
 
                                         ?>
                              </table>
-                          
+                            <input type="submit" name="delete" value="delete">    
                     </form>
                    <a href="http://www.urbandictionary.com/define.php?term=library" target="blank">what is a library? Click on me and find out!</a>			
 		</div>

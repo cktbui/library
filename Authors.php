@@ -22,31 +22,52 @@
 		<div id="container"> <!--An invisible container to keep the content in the middle of the page-->
 			<h1 id="welcome">Authors</h1>
                         <p id="about">The authors of the Book Library</p>
+                      
+                        <form action="#" method="post">
+                        
                         <table class="tablestyle">
                         <thead>
                            <tr>
                                 <th>Author ID</th>
                                <th>Author name</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
+                                
                             </tr>
                         </thead>
                             <?php
                                 $db = new mysqli("localhost","librarian","","library");
+                                 if(isset($_POST["delete"]))
+                                {
+                                   $id=$_POST["radio"];
+                                   $sql1= "select * from books, authors where books.authorid=authors.authorid and authors.authorid=$id";
+                                   $resultat = $db->query($sql1);
+                                   $antrader = $db->affected_rows;
+                                   if($antrader === 0)
+                                   {
+                                      $sql ="delete from authors where authorid=$id";
+                                      $resultat = $db->query($sql); 
+                                   }
+                                   else
+                                   {
+                                       echo 'ikke gyldig!!';
+                                   }
+                                   
+                                }
                                 $sql ="select * from authors";
                                 $resultat = $db->query($sql);
                                 while($row = $resultat->fetch_assoc())
                                 {
-                                    echo "<tr><td><a> {$row['authorid']}</a></td><td><a> {$row['name']} </a></td><td><button>Edit</button></td>
-                                    <td><button>Delete</button></td></tr>";
+                                    echo "<tr><td><input type='radio' name='radio'value='{$row['authorid']}'>{$row['authorid']}</td><td>{$row['name']}</td></tr>";
  		
                                 }
-                                $resultat->close();
-                                $db-> close();
+                                                       
+                               
+                                   $resultat->close();
+                                   $db-> close(); 
+                                
                             ?>
                      </table>
-                      
-			
+                            <input type="submit" name="delete" value="delete">
+                    </form>
 	
 			
 		</div>

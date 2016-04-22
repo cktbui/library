@@ -56,17 +56,7 @@
                                     </tr>
                                 </thead>
                                     <?php
-                                        $db = new mysqli("localhost","librarian","","library");
-                                        $sql ="select b.bookid, b.title,a.name, b.pub_year, b.available from books as b, authors as a where b.authorid=a.authorid";
-                                        $resultat = $db->query($sql);
-                                        while($row = $resultat->fetch_assoc())
-                                        {
-                                            echo "<tr><td><input type='radio' name='radio'value='{$row['bookid']}'>{$row['bookid']}</td><td>{$row['title']}</td><td>{$row['name']}</td><td>{$row['pub_year']}</td><td>{$row['available']}</td></tr>";
-                                                
-                                        }
-                                        $resultat->close();
-                                        $db->close();
-                                        if(isset($_POST["add"]))
+                                    if(isset($_POST["add"]))
                                         {
                                              $name = $_POST['author_name'];
                                              $db = new mysqli("localhost","librarian","","library");
@@ -75,7 +65,6 @@
                                              if($db->affected_rows==1)
                                              {
                                                  $row = $resultat1->fetch_assoc();
-                                                 echo "{$row['authorid']}";
                                              }
                                              else{
                                                  die($db->error);
@@ -92,6 +81,17 @@
                                              $db->close();
                                              
                                         }
+                                        $db = new mysqli("localhost","librarian","","library");
+                                        $sql ="select b.bookid, b.title,a.name, b.pub_year, b.available from books as b, authors as a where b.authorid=a.authorid";
+                                        $resultat = $db->query($sql);
+                                        while($row = $resultat->fetch_assoc())
+                                        {
+                                            echo "<tr><td><input type='radio' name='radio'value='{$row['bookid']}'>{$row['bookid']}</td><td>{$row['title']}</td><td>{$row['name']}</td><td>{$row['pub_year']}</td><td>{$row['available']}</td></tr>";
+                                                
+                                        }
+                                        $resultat->close();
+                                        $db->close();
+                                        
                                         
                                          if(isset($_POST["delete"] ))
                                          {

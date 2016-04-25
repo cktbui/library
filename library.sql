@@ -58,8 +58,8 @@ CREATE TABLE `books` (
 --
 
 INSERT INTO `books` (`bookid`, `authorid`, `title`, `ISBN`, `pub_year`, `Available`) VALUES
-(1, 1, 'The Two Towers', '0-261-10236-2', 1954, 'Yes'),
-(2, 1, 'The Return of The King ', '0-261-10237-0', 1955, 'No'),
+(1, 1, 'The Two Towers', '0-261-10236-2', 1954, '5'),
+(2, 1, 'The Return of The King ', '0-261-10237-0', 1955, '5'),
 (3, 6, 'Hunting and Gathering', '9782842630850', 2006, '8'),
 (5, 2, 'The Lion, the Witch and the Wardrobe', '7207376', 1950, '5'),
 (6, 2, 'Prince Caspian', '978-0-00-671679-2', 1951, '5'),

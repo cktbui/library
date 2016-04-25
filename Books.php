@@ -111,7 +111,7 @@
                              </table>
                             <input class="button-delete" type="submit" name="delete" value="delete">    
                     </form>
-                   <a href="http://www.urbandictionary.com/define.php?term=library" target="blank">what is a library? Click on me and find out!</a>			
+                   
 		</div>
 
 	</body>

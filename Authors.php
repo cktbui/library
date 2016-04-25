@@ -5,7 +5,13 @@
 		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 		<title>The Library</title>
 		<link rel="stylesheet" type="text/css" href="Style.css">
-		<script type="text/javascript" src="javascript.js"></script>
+		<script type="text/javascript" src="javascript.js">
+                
+                function hei() {
+                 alert("I am an alert box!");
+                    }
+                
+                </script>
 	</head>
 
 	<body>
@@ -52,20 +58,31 @@
                                
                                  if(isset($_POST["delete"]))
                                 {
-                                   $id=$_POST["radio"];
-                                   $sql1= "select * from books, authors where books.authorid=authors.authorid and authors.authorid=$id";
-                                   $resultat = $db->query($sql1);
-                                   $antrader = $db->affected_rows;
-                                   if($antrader === 0)
-                                   {
-                                      $sql ="delete from authors where authorid=$id";
-                                      $resultat = $db->query($sql); 
+                                   if(isset($_POST["radio"]))
+                                   {    
+                                        $id=$_POST["radio"];
+                                        $sql1= "select * from books, authors where books.authorid=authors.authorid and authors.authorid=$id";
+                                        $resultat = $db->query($sql1);
+                                        $antrader = $db->affected_rows;
+                                        if($antrader === 0)
+                                        {
+                                            $sql ="delete from authors where authorid=$id";
+                                            $resultat = $db->query($sql); 
+                                        }
+                                        else
+                                            {
+                                                echo '<script language="javascript">';
+                                                echo 'alert("you cant delete this author!!")';
+                                                echo '</script>';
+
+                                            }
                                    }
-                                   else
-                                   {
-                                       echo 'ikke gyldig!!';
+                                   else{
+                                        echo '<script language="javascript">';
+                                        echo 'alert("Select an author to delete!!")';
+                                        echo '</script>';
+                                      
                                    }
-                                   
                                 }
                                 $sql ="select * from authors";
                                 $resultat = $db->query($sql);
@@ -81,7 +98,7 @@
                                 
                             ?>
                      </table>
-                            <input class="button-delete" type="submit" name="delete" value="delete">
+                        <input class="button-delete" type="submit" name="delete" value="delete" onclick="hei()">
                     </form>
 	
 			

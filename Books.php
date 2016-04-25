@@ -26,7 +26,7 @@
 			
                         <form action="#" method="post">
                             <input  class="input" type="text" name="title" placeholder="Book title">
-                            <select class="input" name="author_name" placeholder="Author name">
+                            <select name="author_name" placeholder="Author name">
                                 <?php
                                     $db = new mysqli("localhost","librarian","","library");
                                     $sql ="select name from authors";
@@ -67,7 +67,9 @@
                                                 $resultat = $db->query($sql);
                                              }
                                             else{
-                                                echo 'hei';
+                                                echo '<script language="javascript">';
+                                                echo 'alert("Select a book to delete!!")';
+                                                echo '</script>';
                                             }
                                             
                                         }
@@ -92,7 +94,6 @@
                                              $available = $_POST['available'];
                                              $sql = "insert into books values('', $authorid, '$title','$ISBN','$pubyear','$available')";
                                              $resultat = $db->query($sql);
-                                             //$resultat->close();
                                              $db->close();
                                              
                                         }

@@ -25,8 +25,8 @@
 
 			
                         <form action="#" method="post">
-                            <input type="text" name="title" placeholder="Book title">
-                            <select name="author_name" placeholder="Author name">
+                            <input  class="input" type="text" name="title" placeholder="Book title">
+                            <select class="input" name="author_name" placeholder="Author name">
                                 <?php
                                     $db = new mysqli("localhost","librarian","","library");
                                     $sql ="select name from authors";
@@ -40,10 +40,10 @@
                                     
                                 ?>
                                 </select>
-                            <input type="text" name="ISBN" placeholder="ISBN">
-                            <input type="text" name="pub_year" placeholder="Published year">
-                            <input type="text" name="available" placeholder="Available">
-                            <input type="submit" name="add" value="Add"> 
+                            <input class="input" type="text" name="ISBN" placeholder="ISBN">
+                            <input class="input" type="text" name="pub_year" placeholder="Published year">
+                            <input class="input" type="text" name="available" placeholder="Available">
+                            <input class="button-add" type="submit" name="add" value="Add"> 
                             
                             <table class="tablestyle">
                                 <thead>
@@ -56,6 +56,21 @@
                                     </tr>
                                 </thead>
                                     <?php
+                                    
+                                    if(isset($_POST["delete"] ))
+                                        {
+                                            if(isset($_POST["radio"]))
+                                            {
+                                                $id =$_POST["radio"];
+                                                $db = new mysqli("localhost","librarian","","library");
+                                                $sql ="Delete from books where bookid=$id";
+                                                $resultat = $db->query($sql);
+                                             }
+                                            else{
+                                                echo 'hei';
+                                            }
+                                            
+                                        }
                                     if(isset($_POST["add"]))
                                         {
                                              $name = $_POST['author_name'];
@@ -91,26 +106,9 @@
                                         }
                                         $resultat->close();
                                         $db->close();
-                                        
-                                        
-                                        if(isset($_POST["delete"] ))
-                                        {
-                                            if(isset($_POST["radio"]))
-                                            {
-                                                $id =$_POST["radio"];
-                                                $db = new mysqli("localhost","librarian","","library");
-                                                $sql ="Delete from books where bookid=$id";
-                                                $resultat = $db->query($sql);
-                                             }
-                                            else{
-                                                echo 'hei';
-                                            }
-                                            
-                                        }
-
                                         ?>
                              </table>
-                            <input type="submit" name="delete" value="delete">    
+                            <input class="button-delete" type="submit" name="delete" value="delete">    
                     </form>
                    <a href="http://www.urbandictionary.com/define.php?term=library" target="blank">what is a library? Click on me and find out!</a>			
 		</div>

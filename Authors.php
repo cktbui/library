@@ -24,8 +24,8 @@
                         <p id="about">The authors of the Book Library</p>
                       
                         <form action="#" method="post">
-                        <input type="text" name="name" placeholder="Author name">
-                        <input type="submit" name="add" value="Add"> 
+                        <input class="input" type="text" name="name" placeholder="Author name">
+                        <input class="button-add" type="submit" name="add" value="Add"> 
                         
                         <table class="tablestyle">
                         <thead>
@@ -81,7 +81,7 @@
                                 
                             ?>
                      </table>
-                            <input type="submit" name="delete" value="delete">
+                            <input class="button-delete" type="submit" name="delete" value="delete">
                     </form>
 	
 			

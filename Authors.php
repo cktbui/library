@@ -35,10 +35,21 @@
                                 
                             </tr>
                         </thead>
+                            <?php
+                             $db = new mysqli("localhost","librarian","","library");
+                            if(isset($_POST["add"]))
+                            {
+                                $name = $_POST["name"];
+                                
+                                $sql="insert into authors values('','$name')";
+                                $resultat = $db->query($sql);
+     
+                            } 
                             
+                            ?>
                         
                             <?php
-                                $db = new mysqli("localhost","librarian","","library");
+                               
                                  if(isset($_POST["delete"]))
                                 {
                                    $id=$_POST["radio"];

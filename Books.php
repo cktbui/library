@@ -93,14 +93,20 @@
                                         $db->close();
                                         
                                         
-                                         if(isset($_POST["delete"] ))
-                                         {
-                                             $id = $_POST["radio"];
-                                            $db = new mysqli("localhost","librarian","","library");
-                                            $sql ="Delete from books where bookid=$id";
-                                            $resultat = $db->query($sql);
-                                             
-                                         }
+                                        if(isset($_POST["delete"] ))
+                                        {
+                                            if(isset($_POST["radio"]))
+                                            {
+                                                $id =$_POST["radio"];
+                                                $db = new mysqli("localhost","librarian","","library");
+                                                $sql ="Delete from books where bookid=$id";
+                                                $resultat = $db->query($sql);
+                                             }
+                                            else{
+                                                echo 'hei';
+                                            }
+                                            
+                                        }
 
                                         ?>
                              </table>

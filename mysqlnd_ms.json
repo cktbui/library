@@ -1,0 +1,23 @@
+{
+	"appmaster": {
+		"master": {
+			"master_0": {
+				"host": "10.253.5.52",
+				"port": "3306",
+				"user": "librarian",
+				"password": "",
+				"db" : "library"
+			}
+},
+		"slave": {
+			"slave_0": {
+				"host": "192.168.163.129",
+				"port": "3306",
+				"user": "librarian",
+				"password": "",
+				"db": "library"
+				}
+			}
+		}
+}
+

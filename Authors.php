@@ -40,7 +40,8 @@
                             </tr>
                         </thead>
                             <?php
-                             $db = new mysqli("localhost","librarian","","library");
+                             $db = new mysqli("appmaster","librarian","","library");
+				echo "$db->host_info";
                             if(isset($_POST["add"]))
                             {
                                 $name = $_POST["name"];

@@ -14,6 +14,10 @@ body{
 	background: url(crossword.png) ; 
 	text-align: center;
 }
+#server{
+    margin-top: 2%;
+    margin-left: 83%;
+}
 .tablestyle{
 	margin-right: auto;
 	margin-left: auto;
@@ -23,9 +27,6 @@ body{
         width: 100%;
         font-family: "Raleway", sans-serif;
   
-}
-.tablestyle thead{
-    /*background-color: #96E0D3;*/ 
 }
 .tablestyle tr{
     border-bottom-color: gray;
@@ -45,10 +46,14 @@ body{
     padding-bottom: 1%;
 }
 .input{
-    height: 35px;     
+    height: 35px; 
+    padding-left: 30px;
+    
+    margin-left: 10px;
 }
 select{
-   height: 39px; 
+   height: 39px;
+   margin-left: 10px;
 }
 .radio{
     width: 30px;
@@ -146,9 +151,9 @@ h1{
 #welcome{
 	color:#96E0D3;
 	font-family: "Raleway", sans-serif;
-	margin-top: 2.5em;
+	margin-top: 1em;
 	margin-left:auto;
-	margin-right:auto;
+	margin-right:94%;
 	font-size: 50px;
 }
 

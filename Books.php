@@ -21,7 +21,8 @@
 	
 		<div id="container"> <!--An invisible container to keep my content in the middle of the page-->
                         <?php 
-                                echo "<P id='server'> IP address (". $_SERVER['REMOTE_ADDR']." )</p>";
+                                echo "<P class='server'> IP address (". $_SERVER['REMOTE_ADDR']." )</p>";
+                                echo "<P class='server'> IP address (". $_SERVER['SERVER_ADDR']." )</p>";
                         ?>
 			<h1 id="welcome">books</h1>
                         <p id="about">All the books in the library!</p>

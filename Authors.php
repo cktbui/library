@@ -23,7 +23,7 @@
                         <?php 
                                 echo "<P id='server'> IP address (". $_SERVER['REMOTE_ADDR']." )</p>";
                         ?>
-			<h1 id="welcome">Authors</h1>
+			<h1 id="welcome">authors</h1>
                         <p id="about">The authors of the Book Library</p>
                       
                         <form action="#" method="post">

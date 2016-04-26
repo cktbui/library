@@ -20,7 +20,7 @@
 	
 		<div id="container"> <!--An invisible container to keep my content in the middle of the page-->
 			<h1 id="welcome-index">Welcome to The Book Library</h1>
-                        <p id="about">One of the best libraries in the country!</p>
+                        <p id="about">A place for mind feeding</p>
 
 		</div>
 

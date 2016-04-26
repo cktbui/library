@@ -4,8 +4,7 @@
 	<head>
                 <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 		<title>The Library</title>
-		<link rel="stylesheet" type="text/css" href="Style.css">
-		<script type="text/javascript" src="javascript.js"></script>            
+		<link rel="stylesheet" type="text/css" href="Style.css">       
 	</head>
 
 	<body>

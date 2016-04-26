@@ -5,20 +5,14 @@
 		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 		<title>The Library</title>
 		<link rel="stylesheet" type="text/css" href="Style.css">
-		<script type="text/javascript" src="javascript.js">
-                
-                function hei() {
-                 alert("I am an alert box!");
-                    }
-                
-                </script>
+		<script type="text/javascript" src="javascript.js"></script>
 	</head>
 
 	<body>
 		<header>
 			<nav>
 				<a class="bucket-link" href="Authors.php">Authors</a>
-				<a href="../index.php" ><img src="B-ribbon.png" class="welcome-link-img" alt="Turqoise ribbon-link with a curly B on."/> </a> 
+				<a href="index.php"><img src="B-ribbon.png" class="welcome-link-img" alt="Turqoise ribbon-link with a curly B on."/> </a> 
                                 <a class="done-link" href="Books.php">Books</a>
 			</nav>
 		</header>

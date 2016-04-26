@@ -20,6 +20,9 @@
 
 	
 		<div id="container"> <!--An invisible container to keep the content in the middle of the page-->
+                        <?php 
+                                echo "<P id='server'> IP address (". $_SERVER['REMOTE_ADDR']." )</p>";
+                        ?>
 			<h1 id="welcome">Authors</h1>
                         <p id="about">The authors of the Book Library</p>
                       

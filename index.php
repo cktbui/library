@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="eng">
-	<head   
+        <head>   
 		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 		<title>The Library</title>
 		<link rel="stylesheet" type="text/css" href="Style.css">
@@ -18,9 +18,9 @@
 
 
 	
-		<div id="container"> <!--An invisible container to keep my content in the middle of the page-->
+		<div id="container"> <!--An invisible container to keep the content in the middle of the page-->
 			<h1 id="welcome-index">Welcome to The Book Library</h1>
-                        <p id="about">One of the best libraries in the country!</p>
+                        <p id="about">A buffet of soul food</p>
 
 		</div>
 

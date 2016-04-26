@@ -4,15 +4,14 @@
 	<head>
                 <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 		<title>The Library</title>
-		<link rel="stylesheet" type="text/css" href="Style.css">
-		<script type="text/javascript" src="javascript.js"></script>            
+		<link rel="stylesheet" type="text/css" href="Style.css">       
 	</head>
 
 	<body>
 		<header>
 			<nav>
 				<a class="bucket-link" href="Authors.php">Authors</a>
-				<a href="../index.php" ><img src="B-ribbon.png" class="welcome-link-img" alt="Turqoise ribbon-link with a curly B on."/> </a> 
+				<a href="index.php" ><img src="B-ribbon.png" class="welcome-link-img" alt="Turqoise ribbon-link with a curly B on."/> </a> 
                                 <a class="done-link" href="Books.php">Books</a>
 			</nav>
 		</header>
@@ -24,7 +23,7 @@
                                 echo "<P class='server'> IP address (". $_SERVER['REMOTE_ADDR']." )</p>";
                                 echo "<P class='server'> IP host (". $_SERVER['SERVER_ADDR']." )</p>";
                         ?>
-			<h1 id="welcome">books</h1>
+			<h1 id="welcome">Books</h1>
                         <p id="about">All the books in the library!</p>
 
 			

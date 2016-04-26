@@ -31,7 +31,7 @@
                             <input  class="input" type="text" name="title" placeholder="Book title">
                             <select name="author_name" placeholder="Author name">
                                 <?php
-                                    $db = new mysqli("localhost","librarian","","library");
+                                    $db = new mysqli("appmaster","librarian","","library");
                                     $sql ="select name from authors";
                                     $resultat = $db->query($sql);
                                     while($row = $resultat->fetch_assoc())
@@ -65,7 +65,7 @@
                                             if(isset($_POST["radio"]))
                                             {
                                                 $id =$_POST["radio"];
-                                                $db = new mysqli("localhost","librarian","","library");
+                                                $db = new mysqli("appmaster","librarian","","library");
                                                 $sql ="Delete from books where bookid=$id";
                                                 $resultat = $db->query($sql);
                                              }
@@ -79,7 +79,7 @@
                                     if(isset($_POST["add"]))
                                         {
                                              $name = $_POST['author_name'];
-                                             $db = new mysqli("localhost","librarian","","library");
+                                             $db = new mysqli("appmaster","librarian","","library");
                                              $getNameId = "select authorid from authors where name='$name'";
                                              $resultat1 = $db->query($getNameId);
                                              if($db->affected_rows==1)
@@ -100,7 +100,7 @@
                                              $db->close();
                                              
                                         }
-                                        $db = new mysqli("localhost","librarian","","library");
+                                        $db = new mysqli("appmaster","librarian","","library");
                                         $sql ="select b.bookid, b.title,a.name, b.pub_year, b.available from books as b, authors as a where b.authorid=a.authorid";
                                         $resultat = $db->query($sql);
                                         while($row = $resultat->fetch_assoc())

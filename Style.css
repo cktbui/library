@@ -50,6 +50,9 @@ body{
 select{
    height: 39px; 
 }
+.radio{
+    width: 30px;
+}
 .button-add{
     background-color: #0EBA34;
     font-size: 16px;

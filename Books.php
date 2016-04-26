@@ -102,14 +102,14 @@
                                         $resultat = $db->query($sql);
                                         while($row = $resultat->fetch_assoc())
                                         {
-                                            echo "<tr><td><input type='radio' name='radio'value='{$row['bookid']}'>{$row['bookid']}</td><td>{$row['title']}</td><td>{$row['name']}</td><td>{$row['pub_year']}</td><td>{$row['available']}</td></tr>";
+                                            echo "<tr><td><input class='radio' type='radio' name='radio'value='{$row['bookid']}'>{$row['bookid']}</td><td>{$row['title']}</td><td>{$row['name']}</td><td>{$row['pub_year']}</td><td>{$row['available']}</td></tr>";
                                                 
                                         }
                                         $resultat->close();
                                         $db->close();
                                         ?>
                              </table>
-                            <input class="button-delete" type="submit" name="delete" value="delete">    
+                            <input class="button-delete" type="submit" name="delete" value="Delete">    
                     </form>
                    
 		</div>

@@ -82,7 +82,7 @@
                                 $resultat = $db->query($sql);
                                 while($row = $resultat->fetch_assoc())
                                 {
-                                    echo "<tr><td><input type='radio' name='radio'value='{$row['authorid']}'>{$row['authorid']}</td><td>{$row['name']}</td></tr>";
+                                    echo "<tr><td><input class='radio' type='radio' name='radio'value='{$row['authorid']}'>{$row['authorid']}</td><td>{$row['name']}</td></tr>";
  		
                                 }
                                                        
@@ -92,7 +92,7 @@
                                 
                             ?>
                      </table>
-                        <input class="button-delete" type="submit" name="delete" value="delete" onclick="hei()">
+                        <input class="button-delete" type="submit" name="delete" value="Delete" onclick="hei()">
                     </form>
 	
 			
